@@ -7,9 +7,26 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<div class="container">
-	<%= yield %>
-</div>
+	<div class="container">
 
+		<header>
+			<div class="row">
+				<div class="col-md-7">
+					<h1>Lordy Lordy</h1>
+				</div>
+				<div class="col-md-5">
+					<ul class="nav nav-tabs">
+					  <li role="presentation" class="active"><%= link_to "Home", root_path %></li>
+					  <li role="presentation"><%= link_to "Share a Memory", new_memory_path %></li>
+					  <li role="presentation"><%= link_to "See all Memories", memories_path %></li>
+					  <li role="presentation"><%= link_to "Admin", root_path %></li>
+					</ul>
+				</div>
+			</div>
+		</header>
+
+		<%= yield %>
+
+	</div>
 </body>
 </html>

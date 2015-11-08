@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @memory.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @memory.email %>
+</p>
+
+<p>
+  <strong>Relationship:</strong>
+  <%= @memory.relationship %>
+</p>
+
+<p>
+  <strong>Year met:</strong>
+  <%= @memory.year_met %>
+</p>
+
+<p>
+  <strong>Memory1:</strong>
+  <%= @memory.memory1 %>
+</p>
+
+<p>
+  <strong>Memory2:</strong>
+  <%= @memory.memory2 %>
+</p>
+
+<p>
+  <strong>Memory3:</strong>
+  <%= @memory.memory3 %>
+</p>
+
+<%= link_to 'Edit', edit_memory_path(@memory) %> |
+<%= link_to 'Back', memories_path %>

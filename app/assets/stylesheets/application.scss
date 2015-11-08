@@ -16,3 +16,23 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+p {
+	em {
+/*		text-transform: uppercase;
+*/	}
+}
+
+label {
+	width: 300px;
+	font-weight: normal;
+}
+
+h2 {
+	font-size: 15px ;
+
+}
+
+header {
+	margin: 5rem 0;
+}
