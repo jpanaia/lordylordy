@@ -1,32 +1,57 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Lordylordy</title>
+
+  <title>Lordy, Lordy, Courtney is 40</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= google_fonts_link_tag 'Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic|Montserrat:700|Merriweather:400italic' %>
   <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<body>
-	<div class="container">
+<body id="page-top" data-spy="scroll" data-target=".navbar-custom">
+	 <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <%= link_to(root_path, class: 'navbar-brand') do %>
+				  <h1>Lordy, Lordy, Courtney is 40</h1>
+				<% end %>
+            </div>
 
-		<header>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+		      <ul class="nav navbar-nav">
+		        <li class="active"><a href="#intro">Home</a></li>
+		        <li><a href="#about">About</a></li>
+				<li><a href="#service">Service</a></li>
+				<li><a href="#contact">Contact</a></li>
+		      </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+	<%= yield %>
+
+	<footer>
+		<div class="container">
 			<div class="row">
-				<div class="col-md-7">
-					<h1>Lordy Lordy</h1>
+				<div class="col-md-12 col-lg-12">
+					<div class="wow shake" data-wow-delay="0.4s">
+					<div class="page-scroll marginbot-30">
+						<a href="#intro" id="totop" class="btn btn-circle">
+							<i class="fa fa-angle-double-up animated"></i>
+						</a>
+					</div>
+					</div>
+					<p>&copy;Copyright 2016 - JNP Designs. All rights reserved.</p>    
 				</div>
-				<div class="col-md-5">
-					<ul class="nav nav-tabs">
-					  <li role="presentation" class="active"><%= link_to "Home", root_path %></li>
-					  <li role="presentation"><%= link_to "Share a Memory", new_memory_path %></li>
-					  <li role="presentation"><%= link_to "See all Memories", memories_path %></li>
-					  <li role="presentation"><%= link_to "Admin", root_path %></li>
-					</ul>
-				</div>
-			</div>
-		</header>
-
-		<%= yield %>
-
-	</div>
+			</div>	
+		</div>
+	</footer>
 </body>
 </html>

@@ -4,6 +4,7 @@
 
 <% @memories.each do |memory| %>
   <div class="panel">
+    <p>On <%= memory.created_at %></p>
     <h2><%= memory.name %></h2> 
     <p>(<em><%= memory.relationship %> since <%= memory.year_met %>) shared:</em></p>
     <p><%= memory.memory1 %></p>
