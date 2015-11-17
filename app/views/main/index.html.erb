@@ -1,27 +1,10 @@
-<!-- <div class="pure-g">
-    <div class="pure-u-1 pure-u-md-1-2" id="textBlock"> 
-		<h1>Lordy, Lordy, Courtney is</h1>
-		<h1 class="big">40</h1>
-
-	    <p>Please help me celebrate the birth of the lovely <strong>Courtney Lynne Rodi</strong>. <br/>Despite sometimes getting carded at R-rated movies she turns 40 on January 16, 2016! </p>
-
-		<p>Click the "Share a Memory" button below to share your silliest, most awesome Courtney stories. I’ll share this compliation of love with the birthday girl on her big day.</p>
-
-		<p><strong>THE GOAL:</strong> tears. Lots of happy tears!</p>
-
-		<p class="big">** Please remember this is a secret birthday surprise! **</p>
-	</div>
-    <div class="pure-u-1 pure-u-md-1-2"> 
-    	<%#= link_to 'Share a Memory', new_memory_path, class: 'btn btn-primary' %>
-    </div>
-</div>
- -->
 <!-- Section: intro -->
     <section id="intro" class="intro">
 	
 		<div class="slogan">
-			<h2>WELCOME TO <span class="text_color">SQUAD</span> </h2>
-			<h4>WE ARE GROUP OF GENTLEMEN MAKING AWESOME WEB WITH BOOTSTRAP</h4>
+			<h4>Hey everyone:</h4>
+			<h2>Wish Courtney a <br/>Happy 40th Birthday!</h2>
+			<h4>This is a big secret, you guys.</h4>
 		</div>
 		<div class="page-scroll">
 			<a href="#service" class="btn btn-circle">
@@ -39,7 +22,7 @@
 				<div class="col-lg-8 col-lg-offset-2">
 					<div class="wow bounceInDown" data-wow-delay="0.4s">
 					<div class="section-heading">
-					<h2>About us</h2>
+					<h2>About Courtney</h2>
 					<i class="fa fa-2x fa-angle-down"></i>
 
 					</div>
@@ -60,9 +43,9 @@
 				<div class="wow bounceInUp" data-wow-delay="0.2s">
                 <div class="team boxed-grey">
                     <div class="inner">
-						<h5>Anna Hanaceck</h5>
-                        <p class="subtitle">Pixel Crafter</p>
-                        <div class="avatar"><img src="#" alt="" class="img-responsive img-circle" /></div>
+						<h5>Day of Birth</h5>
+                        <p class="subtitle">January 6, 1976</p>
+                        <div class="avatar"><img src='<%= image_path "cr-parachute.jpg" %>' alt="" class="img-responsive img-circle" /></div>
                     </div>
                 </div>
 				</div>
@@ -71,9 +54,9 @@
 				<div class="wow bounceInUp" data-wow-delay="0.5s">
                 <div class="team boxed-grey">
                     <div class="inner">
-						<h5>Maura Daniels</h5>
-                        <p class="subtitle">Ruby on Rails</p>
-                        <div class="avatar"><img src="#" alt="" class="img-responsive img-circle" /></div>
+						<h5>Place of Birth</h5>
+                        <p class="subtitle">Louisville, KY</p>
+                        <div class="avatar"><img src='<%= image_path "cr-walkman.jpg" %>' class="img-responsive img-circle"></div>
 
                     </div>
                 </div>
@@ -83,9 +66,9 @@
 				<div class="wow bounceInUp" data-wow-delay="0.8s">
                 <div class="team boxed-grey">
                     <div class="inner">
-						<h5>Jack Briane</h5>
-                        <p class="subtitle">jQuery Ninja</p>
-                        <div class="avatar"><img src="#" alt="" class="img-responsive img-circle" /></div>
+						<h5>Parents</h5>
+                        <p class="subtitle">The Knopfs</p>
+                        <div class="avatar"><img src='<%= image_path "knopfs.jpg" %>' alt="" class="img-responsive img-circle" /></div>
 
                     </div>
                 </div>
@@ -95,9 +78,9 @@
 				<div class="wow bounceInUp" data-wow-delay="1s">
                 <div class="team boxed-grey">
                     <div class="inner">
-						<h5>Tom Petterson</h5>
-                        <p class="subtitle">Typographer</p>
-                        <div class="avatar"><img src="#" alt="" class="img-responsive img-circle" /></div>
+						<h5>Son</h5>
+                        <p class="subtitle">Old man Cecil</p>
+                        <div class="avatar"><img src='<%= image_path "cr-cc.jpg" %>' alt="" class="img-responsive img-circle" /></div>
 
                     </div>
                 </div>
@@ -118,7 +101,7 @@
 				<div class="col-lg-8 col-lg-offset-2">
 					<div class="wow bounceInDown" data-wow-delay="0.4s">
 					<div class="section-heading">
-					<h2>Our Services</h2>
+					<h2>Hobbies</h2>
 					<i class="fa fa-2x fa-angle-down"></i>
 
 					</div>
@@ -138,11 +121,12 @@
 				<div class="wow fadeInLeft" data-wow-delay="0.2s">
                 <div class="service-box">
 					<div class="service-icon">
-						<img src='<%= image_path("icons/service-icon-1.png") %>'>
+						<!-- <img src='<%#= image_path("icons/service-icon-1.png") %>'> -->
+						<i class="fa fa-fire-extinguisher"></i>
 					</div>
 					<div class="service-desc">
-						<h5>Print</h5>
-						<p>Vestibulum tincidunt enim in pharetra malesuada. Duis semper magna metus electram accommodare.</p>
+						<h5>Improv</h5>
+						<p>Courtney is a cast member at <a href="http://www.brodytheater.com/" target="_blank">Brody Theater</a> here in Portland, OR.</p>
 					</div>
                 </div>
 				</div>
@@ -154,8 +138,8 @@
 						<img src='<%= image_path("icons/service-icon-2.png") %>'>
 					</div>
 					<div class="service-desc">
-						<h5>Web Design</h5>
-						<p>Vestibulum tincidunt enim in pharetra malesuada. Duis semper magna metus electram accommodare.</p>
+						<h5>Rock Climbing</h5>
+						<p>Courtney enjoys indoor rock climbing and bouldering at <a href="http://portlandrockgym.com/" target="_blank">Portland Rock Gym</a>. She has yet to climb outdoors despite a <a href="https://scontent-sea1-1.xx.fbcdn.net/hphotos-xpt1/v/t1.0-9/12241294_10152845538899058_8427064305425055554_n.jpg?oh=96eb61e4fdc3629e69a5e7ac1ea635e6&oe=56B8A4F5" target="_blank">doctored photo</a> claiming otherwise.</p>
 					</div>
                 </div>
 				</div>
@@ -167,7 +151,7 @@
 						<img src='<%= image_path("icons/service-icon-3.png") %>'>
 					</div>
 					<div class="service-desc">
-						<h5>Photography</h5>
+						<h5>Hiking</h5>
 						<p>Vestibulum tincidunt enim in pharetra malesuada. Duis semper magna metus electram accommodare.</p>
 					</div>
                 </div>
@@ -180,8 +164,8 @@
 						<img src='<%= image_path("icons/service-icon-4.png") %>'>
 					</div>
 					<div class="service-desc">
-						<h5>Cloud System</h5>
-						<p>Vestibulum tincidunt enim in pharetra malesuada. Duis semper magna metus electram accommodare.</p>
+						<h5>Eating</h5>
+						<p>Courtney is a self-described foodie and enjoys indulging in cusine ranging from food carts to sushi.</p>
 					</div>
                 </div>
 				</div>
@@ -202,7 +186,8 @@
 				<div class="col-lg-8 col-lg-offset-2">
 					<div class="wow bounceInDown" data-wow-delay="0.4s">
 					<div class="section-heading">
-					<h2>Get in touch</h2>
+					<h2>Sign the card</h2>
+					<p>Please share a share your silliest, most awesome Courtney stories, memories and well-wishes.<br/> All submissions will be shared with the birthday girl on her big day. Thanks!</p>
 					<i class="fa fa-2x fa-angle-down"></i>
 
 					</div>
@@ -267,26 +252,27 @@
 		
 		<div class="col-lg-4">
 			<div class="widget-contact">
-				<h5>Main Office</h5>
+				<h5 style="margin-bottom:2px">Mailing Address</h5>
+				<p>For gag gifts and old fashioned cards.</p>
 				
 				<address>
-				  <strong>Squas Design, Inc.</strong><br>
-				  Tower 795 Folsom Ave, Beautiful Suite 600<br>
-				  San Francisco, CA 94107<br>
-				  <abbr title="Phone">P:</abbr> (123) 456-7890
+				  <strong>Courtney Rodi</strong><br>
+				  2625 E Burnside St. #109<br>
+				  Portland, OR 97214<br>
+				 <!--  <abbr title="Phone">P:</abbr> (123) 456-7890 -->
 				</address>
 
 				<address>
 				  <strong>Email</strong><br>
-				  <a href="mailto:#">email.name@example.com</a>
+				  <a href="mailto:courtney76@gmail.com">courtney76@gmail.com</a>
 				</address>	
 				<address>
-				  <strong>We're on social networks</strong><br>
+				  <strong>She's on social networks</strong><br>
                        	<ul class="company-social">
-                            <li class="social-facebook"><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                            <li class="social-twitter"><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                            <li class="social-dribble"><a href="#" target="_blank"><i class="fa fa-dribbble"></i></a></li>
-                            <li class="social-google"><a href="#" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+                            <li class="social-facebook"><a href="https://www.facebook.com/crodi?fref=ufi" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                            <li class="social-twitter"><a href="https://twitter.com/decatursun" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                            <li class="social-instagram"><a href="https://www.instagram.com/decatursun76/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                            <li class="social-google"><a href="https://plus.google.com/100816275047146196334/" target="_blank"><i class="fa fa-google-plus"></i></a></li>
                         </ul>	
 				</address>					
 			

@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
   resources :memories
-  root 'main#index'
+  root 'memories#new'
 
 end
