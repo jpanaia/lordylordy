@@ -16,23 +16,33 @@
       <div class="col-md-6">
           <div class="form-group">
             <%= f.label :name %>
-            <%= f.text_field :name, placeholder: "Enter name", required: "required", class: "form-control", id: "name" %>
+             <div class="input-group">
+                <span class="input-group-addon"><span class="glyphicon glyphicon-question-sign"></span></span>
+                <%= f.text_field :name, placeholder: "Enter name", required: "required", class: "form-control", id: "name" %>
+            </div>
           </div>
           <div class="form-group">
               <%= f.label :email %>
               <div class="input-group">
                   <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span>
                   </span>
-                  <%= f.text_field :email, class: "form-control", id: "email", placeholder: "Enter email", required: "required" %>
+                  <%= f.email_field :email, class: "form-control", id: "email", placeholder: "Enter email", required: "required" %>
               </div>
           </div> 
           <div class="form-group">
-            <%= f.label :relationship, "Relationship to Courtney" %>
-            <%= f.text_field :relationship, class: "form-control", placeholder: "Enter relationship" %>
+            <%= f.label :relationship, "Relationship" %>
+            <div class="input-group">
+                <span class="input-group-addon"><span class="glyphicon glyphicon glyphicon-heart-empty"></span></span>
+              <%= f.text_field :relationship, class: "form-control", placeholder: "Enter relationship" %>
+              </div>
           </div>
           <div class="form-group">
-            <%= f.label :year_met, "Year you met Courtney" %>
-            <%= f.text_field :year_met, class: "form-control", placeholder: "Enter year" %>
+            <%= f.label :year_met, "Year met" %>
+            <div class="input-group">
+                <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
+                </span>
+                <%= f.text_field :year_met, class: "form-control", placeholder: "Enter year" %>
+            </div>
           </div>
       </div>
       <div class="col-md-6">
@@ -42,7 +52,7 @@
           </div>
       </div>
       <div class="col-md-12">
-            <%= f.submit class: 'btn btn-skin pull-right', id: "btnContactUs" %>
+            <%= f.submit 'Sign the Card', class: 'btn btn-skin pull-right', id: "btnContactUs" %>
       </div>
     </div>       
   <% end %>  

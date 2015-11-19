@@ -1,8 +1,31 @@
-<!-- Section: intro -->
+	 <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <%= link_to(root_path, class: 'navbar-brand') do %>
+				  <h1>Lordy, Lordy</h1>
+				<% end %>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+		      <ul class="nav navbar-nav">
+		        <li class="active"><a href="#intro">Home</a></li>
+		        <li><a href="#about">About</a></li>
+				<li><a href="#service">Hobbies</a></li>
+				<li><a href="#contact">Sign the Card</a></li>
+		      </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav><!-- Section: intro -->
     <section id="intro" class="intro">
 	
 		<div class="slogan">
-			<h2>Wish Courtney a <br/>Happy 40th Birthday!</h2>
+			<h2>Courtney turns 40!</h2>
 			<h4>Scroll down for a super secret birthday card.</h4>
 		</div>
 		<div class="page-scroll">
@@ -123,7 +146,7 @@
 						<img src='<%= image_path("icons/improv.png") %>'> 
 					</div>
 					<div class="service-desc">
-						<h5>Improving</h5>
+						<h5>Improvising</h5>
 						<p>Courtney is hilarious both on and off stage. As a student cast member at <a href="http://www.brodytheater.com/" target="_blank">Brody Theater</a> in NW Portland she causes severe giggling every week.</p>
 					</div>
                 </div>
@@ -242,7 +265,22 @@
 		</div>
 	</section>
 	<!-- /Section: contact -->
-
+<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-lg-12">
+					<div class="wow shake" data-wow-delay="0.4s">
+					<div class="page-scroll marginbot-30">
+						<a href="#intro" id="totop" class="btn btn-circle">
+							<i class="fa fa-angle-double-up animated"></i>
+						</a>
+					</div>
+					</div>
+					<p>&copy; Copyright 2016 - JNP Designs. All rights reserved.</p>    
+				</div>
+			</div>	
+		</div>
+	</footer>
 
 
 <%#= link_to 'Back', memories_path %>
