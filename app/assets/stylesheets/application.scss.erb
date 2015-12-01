@@ -292,7 +292,7 @@ hr {
 }
 
 #intro.intro {
-    padding:20% 0 0 0;
+    padding: 15% 0 0 0;
 }
 
 .intro .slogan {
@@ -312,25 +312,38 @@ hr {
     font-size: 18px;
 }
 
-.intro .slogan h2 {
-    color: #FFF;
-    text-shadow: none;
-    font-size: 60px;
-    line-height: 60px;
-    font-weight: 700;
-    font-family: Montserrat, sans-serif;
-    background-color: rgba(0, 0, 0, 0);
-    text-decoration: none;
-    text-transform: uppercase;
-    border-width: 0px;
-    border-color: #000;
-    border-style: none;
-    text-shadow: -1px 0 1px #000;
-}
-
-.intro .slogan h4 {
-    color: #fff;
-    text-shadow: -1px 1px 1px #000;
+.intro 
+    .slogan 
+        h2 {
+            color: #FFF;
+            text-shadow: none;
+            font-size: 60px;
+            line-height: 60px;
+            font-weight: 700;
+            font-family: Montserrat, sans-serif;
+            background-color: rgba(0, 0, 0, 0);
+            text-decoration: none;
+            text-transform: uppercase;
+            border-width: 0px;
+            border-color: #000;
+            border-style: none;
+            text-shadow: -1px 0 1px #000;
+            margin-bottom: 0.5rem;
+        }
+        h3.number {
+            color: #6773AE;
+            background: white;
+            display: inline-block;
+            border-radius: 60px;
+            padding: 25px 20px;
+            font-size: 6rem;
+            margin-bottom: 1.5rem;
+            font-family: Belgrano;
+            box-shadow: -1px 0 1px #000;
+        }
+        h4 {
+            color: #fff;
+            text-shadow: -1px 1px 1px #000;
 }
 
 
@@ -798,6 +811,11 @@ Parallax
         border-radius: 50%;
         font-size: 20px;
     }
+
+    .intro .slogan h2 {
+       font-size: 45px;
+       line-height: 1em;
+}
     
 }
 
@@ -840,7 +858,7 @@ footer {
 }
 
 #notice {
-    background-color: #4CCCC7;
+    background-color: #6773AE;
     color: #fff;
     padding: 10px;
 }

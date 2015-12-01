@@ -1,18 +1,41 @@
-<p id="notice"><%= notice %></p>
+<!-- <p id="notice"><%#= notice %></p> -->
 
-<%= link_to 'Share a Memory', new_memory_path, class: 'btn btn-primary' %>
+<%#= link_to 'Share a Memory', new_memory_path, class: 'btn btn-primary' %>
 
-<% @memories.each do |memory| %>
-  <div class="panel">
-    <p>On <%= memory.created_at %></p>
-    <h2><%= memory.name %></h2> 
-    <p>(<em><%= memory.relationship %> since <%= memory.year_met %>) shared:</em></p>
-    <p><%= memory.memory1 %></p>
-    <p><%= memory.memory2 %></p>
-    <p><%= memory.memory3 %></p>
-    <!-- Admin Only -->
-    <p><%= link_to 'Show', memory %>
-    <%= link_to 'Edit', edit_memory_path(memory) %>
-    <%= link_to 'Destroy', memory, method: :delete, data: { confirm: 'Are you sure?' } %></p>
-    </div>
-<% end %>
+<div class="container">
+<nav class="navbar navbar-custom navbar-fixed-top top-nav-collapse" role="navigation" style="background-color:#6773AE">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="/">
+                  <h1>Lordy, Lordy</h1></a>            
+            </div>
+        </div>
+        <!-- /.container -->
+    </nav>
+
+<h1>Love for Courtney on her 40th</h1>
+
+    <% @memories.each do |memory| %>
+      <div class="panel">
+        <p>On <%= memory.created_at %></p>
+        <h2><%= memory.name %></h2> 
+        <% if memory.relationship != "" %>
+        <p>(<em><%= memory.relationship %> 
+            <% if memory.year_met != "" %>
+                since <%= memory.year_met %>
+            <% end %>) 
+            shared:</em></p>
+        <% end %>
+        <p><%= memory.memory1 %></p>
+        <p><%= memory.memory2 %></p>
+        <p><%= memory.memory3 %></p>
+        <!-- Admin Only -->
+        <p><%#= link_to 'Show', memory %>
+        <%#= link_to 'Edit', edit_memory_path(memory) %>
+        <%#= link_to 'Destroy', memory, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+        </div>
+    <% end %>
+</div>
