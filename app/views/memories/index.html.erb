@@ -10,72 +10,59 @@
                     <i class="fa fa-bars"></i>
                 </button>
                 <a class="navbar-brand" href="/">
-                  <h1>Lordy, Lordy. Love for Courtney who today turns 40!</h1></a> 
+                  <h1 align="center">Lordy, Lordy. Love for Courtney who today turns 40!</h1></a> 
                   <p class="pull-right">January 6, 2016</p>           
             </div>
         </div>
         <!-- /.container -->
     </nav>
-<br/><br/><br/><br/><br/>
-
+<br/><br/>
+<nav class="actions light">
+    <span id="nav-prev">&lt;</span>
+    <span id="nav-next">&gt;</span>
+    <span id="close">close</span>
+</nav>
 <section class="main">
 
     <div class="baraja-demo">
         <ul id="baraja-el" class="baraja-container">
-            <li><img src='<%= image_path("1.jpg") %>'><h4>Coco Loko</h4><p>Total bicycle rights in blog four loko raw denim ex, helvetica sapiente odio placeat.</p></li>
-            <li><img src="<%= image_path("1.jpg") %>" alt="image2"/><h4>Vermouth Land</h4><p>Velit chambray fugiat, enim aesthetic esse ullamco typewriter.</p></li>
-            <li><img src="<%= image_path("1.jpg") %>" alt="image3"/><h4>Electrodynamics</h4><p>Before they sold out PBR magna jean shorts non seitan ea. Dolor wolf pop-up.</p></li>
-            <li><img src="<%= image_path("1.jpg") %>" alt="image4"/><h4>Retinal Bliss</h4><p>Locavore vero ad, before they sold out food truck bushwick helvetica.</p></li>
-            <li><img src="<%= image_path("1.jpg") %>" alt="image5"/><h4>Disco Fever</h4><p>Cillum laboris consequat, qui elit retro next level skateboard freegan hella.</p></li>
-            <li><img src="<%= image_path("1.jpg") %>" alt="image6"/><h4>Serenity</h4><p>Truffaut wes anderson hoodie 3 wolf moon labore, fugiat lomo iphone eiusmod vegan.</p></li>
-            <li><img src="<%= image_path("1.jpg") %>" alt="image7"/><h4>Dark Honor</h4><p>Chillwave mustache pinterest, marfa seitan umami id farm-to-table iphone.</p></li>
-            <li><img src="<%= image_path("1.jpg") %>" alt="image8"/><h4>Nested Happiness</h4><p>Minim post-ironic banksy american apparel iphone wayfarers.</p></li>
-            <li><img src="<%= image_path("1.jpg") %>" alt="image9"/><h4>Cherry Country</h4><p>Sint vinyl Austin street art odd future id trust fund, terry richardson cray.</p></li>
-            <li><img src="<%= image_path("1.jpg") %>" alt="image10"/><h4>Cherry Country</h4><p>Sint vinyl Austin street art odd future id trust fund, terry richardson cray.</p></li>
-            <li><img src="<%= image_path("1.jpg") %>" alt="image11"/><h4>Coco Loko</h4><p>Total bicycle rights in blog four loko raw denim ex, helvetica sapiente odio placeat.</p></li>
-            <li><img src="<%= image_path("1.jpg") %>" alt="image12"/><h4>Vermouth Land</h4><p>Velit chambray fugiat, enim aesthetic esse ullamco typewriter.</p></li>
-            <li><img src="<%= image_path("1.jpg") %>" alt="image3"/><h4>Electrodynamics</h4><p>Before they sold out PBR magna jean shorts non seitan ea. Dolor wolf pop-up.</p></li>
-            <li><img src="<%= image_path("1.jpg") %>" alt="image4"/><h4>Retinal Bliss</h4><p>Locavore vero ad, before they sold out food truck bushwick helvetica.</p></li>
-            <li><img src="<%= image_path("1.jpg") %>" alt="image5"/><h4>Disco Fever</h4><p>Cillum laboris consequat, qui elit retro next level skateboard freegan hella.</p></li>
-            <li><img src="<%= image_path("1.jpg") %>" alt="image6"/><h4>Serenity</h4><p>Truffaut wes anderson hoodie 3 wolf moon labore, fugiat lomo iphone eiusmod vegan.</p></li>
-            <li><img src="<%= image_path("1.jpg") %>" alt="image7"/><h4>Dark Honor</h4><p>Chillwave mustache pinterest, marfa seitan umami id farm-to-table iphone.</p></li>
-            <li><img src="<%= image_path("1.jpg") %>" alt="image8"/><h4>Nested Happiness</h4><p>Minim post-ironic banksy american apparel iphone wayfarers.</p></li>
+            <% @memories.each do |memory| %>
+                <li><img src='<%= image_path(memory.name.downcase + ".jpg") %>'>
+                    <h4><%= memory.name %> <em style='font-size:.7em;text-transform:none'><%= memory.relationship.downcase %> since <%= memory.year_met %></em></h4>
+                    <p><%= memory.memory1 %></p>
+                </li>
+            <% end %>
         </ul>
     </div>
-    <nav class="actions light">
-        <span id="nav-prev">&lt;</span>
-        <span id="nav-next">&gt;</span>
-        <span id="close">close</span>
-    </nav>
+ 
 </section>
         
-    <% @memories.each do |memory| %>
-      <div class="panel">
-        <p>On <%= memory.created_at.strftime("%m/%d/%Y") %></p>
-        <h2><%= memory.name %></h2> 
-        <% if memory.relationship != "" %>
-        <p>(<em><%= memory.relationship %> 
-            <% if memory.year_met != "" %>
-                since <%= memory.year_met %>
-            <% end %>) 
+    <%# @memories.each do |memory| %>
+   <!--    <div class="panel">
+        <p>On <%#= memory.created_at.strftime("%m/%d/%Y") %></p>
+        <h2><%#= memory.name %></h2> 
+        <%# if memory.relationship != "" %>
+        <p>(<em><%#= memory.relationship %> 
+            <%# if memory.year_met != "" %>
+                since <%#= memory.year_met %>
+            <%# end %>) 
             shared:</em></p>
-        <% end %>
-        <p><%= memory.memory1 %></p>
-        <p><%= memory.memory2 %></p>
-        <p><%= memory.memory3 %></p>
-        <!-- Admin Only -->
+        <%# end %>
+        <p><%#= memory.memory1 %></p>
+        <p><%#= memory.memory2 %></p>
+        <p><%#= memory.memory3 %></p>
+        Admin Only 
         <p><%#= link_to 'Show', memory %>
         <%#= link_to 'Edit', edit_memory_path(memory) %>
         <%#= link_to 'Destroy', memory, method: :delete, data: { confirm: 'Are you sure?' } %></p>
         </div>
-    <% end %>
+    <%# end %> -->
 </div>
-
- <script type="text/javascript">    
-            $(function() {
-
-                var $el = $( '#baraja-el' ),
-                    baraja = $el.baraja();
+<%= javascript_include_tag 'jquery.baraja', 'data-turbolinks-track' => true %>
+<script type="text/javascript">    
+        $( document ).ready(function() {
+                var $el = $( '#baraja-el' );
+                var baraja = $el.baraja();
 
                 // navigation
                 $( '#nav-prev' ).on( 'click', function( event ) {

@@ -1,5 +1,6 @@
+
 .baraja-demo {
-	width: 200px;
+	width: 400px;
 	margin: 30px auto;
 	color: #aaa;
 }
@@ -14,6 +15,7 @@
 	padding: 8px 10px 5px;
 	margin: 20px 3px 5px;
 	border-bottom: 1px solid #f0f0f0;
+	text-shadow: none;
 }
 
 .baraja-demo p {
@@ -38,5 +40,6 @@
 	display: block;
 	margin: 0 auto;
 	width: 100%;
+	overflow: hidden;
 	border-radius: 10px 10px 0 0;
 }
