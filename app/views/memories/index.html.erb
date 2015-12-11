@@ -27,7 +27,7 @@
     <div class="baraja-demo">
         <ul id="baraja-el" class="baraja-container">
             <% @memories.each do |memory| %>
-                <li><img src='<%= image_path(memory.name.downcase + ".jpg") %>'>
+                <li><img src='<%= image_path(memory.name.downcase.gsub(/\s+/, "") + ".jpg") %>'>
                     <h4><%= memory.name %> <em style='font-size:.7em;text-transform:none'><%= memory.relationship.downcase %> since <%= memory.year_met %></em></h4>
                     <p><%= memory.memory1 %></p>
                 </li>
