@@ -1,62 +1,31 @@
 <!-- <p id="notice"><%#= notice %></p> -->
 
 <%#= link_to 'Share a Memory', new_memory_path, class: 'btn btn-primary' %>
+<div id="bday-bg">
+    <div class="container">
+       
+       <!-- <nav class="actions light">
+            <span id="nav-prev">&lt;</span>
+            <span id="nav-next">&gt;</span>
+            <span id="close">close</span>
+        </nav>-->
+        <section class="main">
 
-<div class="container">
-<nav class="navbar navbar-custom navbar-fixed-top top-nav-collapse" role="navigation" style="background-color:#6773AE">
-        <div class="container">
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-                    <i class="fa fa-bars"></i>
-                </button>
-                <a class="navbar-brand" href="/">
-                  <h1 align="center">Lordy, Lordy. Love for Courtney who today turns 40!</h1></a> 
-                  <p class="pull-right">January 6, 2016</p>           
+            <div class="baraja-demo">
+                <ul id="baraja-el" class="baraja-container">
+                    <% @memories.each do |memory| %>
+                        <li><img src='<%= image_path(memory.name.downcase.gsub(/\s+/, "") + ".jpg") %>'>
+                            <h4><%= memory.name %> 
+                            <em style='font-size:.7em;text-transform:none'><%= memory.relationship.downcase %> 
+                            <%= !memory.year_met.empty? ? 'since '+ memory.year_met : '' %>
+                            </em></h4>
+                            <p><%= memory.memory1 %></p>
+                        </li>
+                    <% end %>
+                </ul>
             </div>
-        </div>
-        <!-- /.container -->
-    </nav>
-<br/><br/>
-<nav class="actions light">
-    <span id="nav-prev">&lt;</span>
-    <span id="nav-next">&gt;</span>
-    <span id="close">close</span>
-</nav>
-<section class="main">
-
-    <div class="baraja-demo">
-        <ul id="baraja-el" class="baraja-container">
-            <% @memories.each do |memory| %>
-                <li><img src='<%= image_path(memory.name.downcase.gsub(/\s+/, "") + ".jpg") %>'>
-                    <h4><%= memory.name %> <em style='font-size:.7em;text-transform:none'><%= memory.relationship.downcase %> since <%= memory.year_met %></em></h4>
-                    <p><%= memory.memory1 %></p>
-                </li>
-            <% end %>
-        </ul>
+        </section>
     </div>
- 
-</section>
-        
-    <%# @memories.each do |memory| %>
-   <!--    <div class="panel">
-        <p>On <%#= memory.created_at.strftime("%m/%d/%Y") %></p>
-        <h2><%#= memory.name %></h2> 
-        <%# if memory.relationship != "" %>
-        <p>(<em><%#= memory.relationship %> 
-            <%# if memory.year_met != "" %>
-                since <%#= memory.year_met %>
-            <%# end %>) 
-            shared:</em></p>
-        <%# end %>
-        <p><%#= memory.memory1 %></p>
-        <p><%#= memory.memory2 %></p>
-        <p><%#= memory.memory3 %></p>
-        Admin Only 
-        <p><%#= link_to 'Show', memory %>
-        <%#= link_to 'Edit', edit_memory_path(memory) %>
-        <%#= link_to 'Destroy', memory, method: :delete, data: { confirm: 'Are you sure?' } %></p>
-        </div>
-    <%# end %> -->
 </div>
 <%= javascript_include_tag 'jquery.baraja', 'data-turbolinks-track' => true %>
 <script type="text/javascript">    
