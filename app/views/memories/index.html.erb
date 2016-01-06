@@ -3,12 +3,8 @@
 <%#= link_to 'Share a Memory', new_memory_path, class: 'btn btn-primary' %>
 <div id="bday-bg">
     <div class="container">
-       
-       <!-- <nav class="actions light">
-            <span id="nav-prev">&lt;</span>
-            <span id="nav-next">&gt;</span>
-            <span id="close">close</span>
-        </nav>-->
+       <h1>Happy Birthday, Courtney!</h1>
+        <p>Click on your stack of birthday cards to read them.</p>
         <section class="main">
 
             <div class="baraja-demo">
@@ -25,6 +21,12 @@
                 </ul>
             </div>
         </section>
+
+        <nav class="actions light">
+            <span id="nav-prev"><i class="fa fa fa-arrow-left"></i></span>
+            <span id="nav-next"><i class="fa fa fa-arrow-right"></i></span>
+            <!--<span id="close">close</span>-->
+        </nav>
     </div>
 </div>
 <%= javascript_include_tag 'jquery.baraja', 'data-turbolinks-track' => true %>
